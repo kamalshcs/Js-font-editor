@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+      function updatefont() {
+        var selector = document.getElementById('selectfont');
+        var family = selector.options[selector.selectedIndex].value;
+        var a = document.getElementById('demo')
+        a.style.fontFamily = family;        
+      }
+
+        function updatecolor() {
+        var selector = document.getElementById('selectcolor');
+        var color = selector.options[selector.selectedIndex].value;
+        var a = document.getElementById('demo')
+        a.style.color = color; 
+      }
+
+        function updatesize() {
+        var selector = document.getElementById('selectsize');
+        var size = selector.options[selector.selectedIndex].value;
+        var a = document.getElementById('demo')
+        a.style.fontSize = size; 
+      }
+
+       function updatebg() {
+        var selector = document.getElementById('selectbg');
+        var bg = selector.options[selector.selectedIndex].value;
+        var a = document.getElementById('demo')
+        a.style.backgroundColor = bg; 
+      }
+
+</script>
+
+
+
+<style type="text/css">
+
+.parent {
+             display: grid;
+             grid-template-columns: 25% 25% 25% 25%;
+             justify-content: : center;
+        }
+
+
+body {
+  background: linear-gradient(90deg, #16a085 ,#f4d03f);
+  }
+
+
+
+
+select{
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+      border: 2px solid #f4d03f;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius:20px ;
+      height:250%;
+      width:90%;
+      text-align: center;
+      justify-content: : center;
+      font-size: 130%;
+      color:white;
+      padding:10px;
+    }
+
+    
+
+  select:hover{
+     background-color: rgba(255, 255, 255, 0.15);
+      border-radius:20px ;
+    
+  }
+  option:hover{
+    color:yellow;
+  }
+ 
+
+
+option{
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #16a085;
+    position: relative;
+    transition: background 0.3s ease-in-out;
+      }
+
+</style>
+
+</head>
+
+
+
+
+<body>
+<div class="parent">
+
+<div class="child">
+  <select id="selectfont" name="selectFont" onchange="updatefont();" style="border: 2px solid #16a085;">
+    <option> Font </option>
+    <option> Arial </option>
+    <option> Sans-Serif </option>                                  
+    <option> Tahoma </option>
+    <option> Verdana </option>
+    <option> Lucida Sans Unicode </option>                               
+  </select>
+</div>
+
+<div class="child">
+   <select id="selectcolor" name="selectColor" onchange="updatecolor();" style="border: 2px solid #2cd396";>
+    <option> Color </option>
+    <option> red </option>
+    <option> yellow </option>                                  
+    <option> white </option>
+                          
+  </select>
+</div>
+
+<div class="child">
+  <select id="selectsize" name="selectSize" onchange="updatesize();" style="border: 2px solid #c3ed3b";>
+    <option > Size </option>
+    <option > x-small </option>
+    <option > x-small </option>                                  
+    <option > x-large </option>
+    <option > xx-large</option>                              
+  </select>
+</div>
+
+<div class="child">
+  <select id="selectbg" name="selectBg" onchange="updatebg();">
+    <option> Background Color </option>
+    <option> teal </option>
+    <option> black </option>
+    <option> white </option>                                  
+                         
+  </select>
+</div>
+
+</div>
+
+<br>
+<br>
+
+  <div class="container">
+  <textarea style="text-align: center; height: 150px; width: 350px; padding-top:40px;" id="demo"></textarea>
+  </div>
+
+
+</body>
+</html>
+
+
